@@ -15,52 +15,166 @@
 
 ## 폴더 구조
 
+
+
 ## 터미널 조작
-- 현재 위치 확인
+- 1.현재 위치 확인
 ```bash
 pwd
 ```
 ```bash
 /Users/jeong-uicheol/Desktop/VS_Code_Python
 ```
+  - 스크린샷
+<img width="481" height="48" alt="과제1 현재위치 확인" src="https://github.com/user-attachments/assets/5cee72c9-bdcc-4463-9a7b-6f6008b5dd64" />
 
 
-- 목록 확인(숨김 파일 포함)
+- 2.목록 확인(숨김 파일 포함)
+```bash
+ls -la
+```
+```bash
+total 192
+drwxr-xr-x  11 jeong-uicheol  staff    352  8 12 13:15 .
+drwx------+ 70 jeong-uicheol  staff   2240  8 13 19:40 ..
+-rw-r--r--@  1 jeong-uicheol  staff   6148  8 10 17:49 .DS_Store
+drwxr-xr-x  15 jeong-uicheol  staff    480  8 12 11:17 .git
+-rw-r--r--   1 jeong-uicheol  staff     20  8 11 13:37 .gitignore
+drwxr-xr-x   7 jeong-uicheol  staff    224  8 13 17:11 Mission2
+drwxr-xr-x   9 jeong-uicheol  staff    288  8 13 17:33 Mission3
+-rw-r--r--   1 jeong-uicheol  staff  17461  8  7 19:26 pythonFile2.py
+-rw-r--r--   1 jeong-uicheol  staff  41093  8 12 11:53 pythonFile22.py
+-rw-r--r--   1 jeong-uicheol  staff  20284  8 10 22:26 pythonFile3.py
+drwxr-xr-x   6 jeong-uicheol  staff    192  8 12 12:18 quiz_clone
+```
+<img width="551" height="185" alt="과제1 ls -la" src="https://github.com/user-attachments/assets/00f2e291-9fe4-4b4b-91ea-8077fb27cfe5" />
+
+
+
+
+- 3.디렉토리 생성
+```bash
+mkdir Mission1 
+```
+<img width="873" height="60" alt="과제1 파일,디렉토리 생성" src="https://github.com/user-attachments/assets/ec518bbf-99ad-441c-aa91-c90f8308455c" />
+
+
+
+- 4.위치 이동
+```bash
+cd Mission1
+```
+<img width="551" height="47" alt="과제1 디렉토리 이동" src="https://github.com/user-attachments/assets/42d8a97b-b087-4e7f-856b-8bde9afa0693" />
+
+
+
+
+- 5.파일, 폴더 복사
+```bash
+cp test1.txt backup.txt
+```
+
+```bash
+cp -r Mission1/ Mission1_backup/
+```
+
+<img width="994" height="752" alt="과제1 파일,폴더 복사" src="https://github.com/user-attachments/assets/f2353496-b558-4564-9dd1-29b74ef69475" />
+
+
+
+- 6.파일 이동/이름변경
+```bash
+mv test.txt Mission1/
+```
+<img width="1188" height="771" alt="과제1 파일 이동" src="https://github.com/user-attachments/assets/118a71b8-630e-4100-bf1f-fdd897c5566e" />
+
+```bash
+mv test.txt test1.txt
+```
+<img width="284" height="48" alt="과제1 파일 이름 변경" src="https://github.com/user-attachments/assets/fd083d2e-1db6-4e8a-8f95-45a2f56950ae" />
+
+
+
+- 7.빈 파일 생성
+```bash
+touch test.txt
+```
+<img width="873" height="60" alt="과제1 파일,디렉토리 생성" src="https://github.com/user-attachments/assets/ec518bbf-99ad-441c-aa91-c90f8308455c" />
+
+
+- 8.삭제
+```bash
+rm -r Mission1_backup/
+```
+```bash
+rm backup.txt
+```
+<img width="973" height="750" alt="과제2 폴더,파일 삭제" src="https://github.com/user-attachments/assets/3f02405c-c810-4ceb-8515-c96cc63a4391" />
+
+
+
+- 9.파일 내용 확인
+```bash
+ls -la
+```
 ```bash
 ls -la
 ```
 
-- 이동
-- ```bash
-cd ..
-```
 
-- 생성
-```bash
-mkdir 
-```
-```bash
-mk
-```
 
-- 복사
-```bash
-cp
-```
 
-- 이동/이름변경
-- 삭제
-- 파일 내용 확인
-- 빈 파일 생성
+
 
 ## 권한 실습
 권한을 확인/변경하는 명령을 수행하고, 변경 전/후 비교를 기술 문서에 남긴다.
 최소 요구: 파일 1개, 디렉토리 1개에 대해 권한 변경 실험을 수행한다.
 
+- 1.권한 확인
+```bash
+ls -la
+```
+```bash
+ls -la
+```
+
+- 2.권한 변경
+```bash
+ls -la
+```
+```bash
+ls -la
+```
+```bash
+ls -la
+```
+```bash
+ls -la
+```
+
+
 
 ## Docker 설치, 기본 점검
 Docker 버전 확인 결과를 기록한다. (docker --version)
 Docker 데몬 동작 여부 확인 결과를 기록한다. (docker info 또는 동등 점검)
+
+- 1.버전 확인
+```bash
+ls -la
+```
+```bash
+ls -la
+```
+
+- 2.데몬 동작 확인
+```bash
+ls -la
+```
+```bash
+ls -la
+```
+
+
 
 
 ## Docker 기본 운영 명령 수행
@@ -68,11 +182,99 @@ Docker 데몬 동작 여부 확인 결과를 기록한다. (docker info 또는 �
 컨테이너: 실행/중지/목록 확인 (예: docker ps, docker ps -a)
 운영: 로그 확인 (예: docker logs), 리소스 확인 (예: docker stats)
 
+- 1.이미지 다운로드
+```bash
+ls -la
+```
+```bash
+ls -la
+```
+
+- 2.이미지 목록 확인
+```bash
+ls -la
+```
+```bash
+ls -la
+```
+
+- 3.컨테이너 실행
+```bash
+ls -la
+```
+```bash
+ls -la
+```
+- 4.컨테이너 중지
+```bash
+ls -la
+```
+```bash
+ls -la
+```
+
+- 4.컨테이너 목록 확인
+```bash
+ls -la
+```
+```bash
+ls -la
+```
+
+
+- 5.로그 확인
+```bash
+ls -la
+```
+```bash
+ls -la
+```
+
+- 6.리소스 확인
+```bash
+ls -la
+```
+```bash
+ls -la
+```
+
+
+
+
+
+
+
 
 ## 컨테이너 실행 실습
 hello-world 실행 성공을 기록한다.
+```bash
+ls -la
+```
+```bash
+ls -la
+```
+
 ubuntu 컨테이너를 실행하고 내부 진입 후 간단 명령(예: ls, echo) 수행 결과를 기록한다.
+```bash
+ls -la
+```
+```bash
+ls -la
+```
+
 컨테이너 종료/유지(attach/exec 등)의 차이를 스스로 관찰하고 간단히 정리한다.
+```bash
+ls -la
+```
+```bash
+ls -la
+```
+```bash
+ls -la
+```
+```bash
+ls -la
+```
 
 
 
@@ -91,6 +293,13 @@ ubuntu 컨테이너를 실행하고 내부 진입 후 간단 명령(예: ls, ech
 
 ## 포트 매핑 및 접속 증거
 브라우저 접속 화면(또는 curl 응답)을 기술 문서에 첨부한다.
+```bash
+ls -la
+```
+```bash
+ls -la
+```
+
 
 
 ## Docker 볼륨 영속성 검증
@@ -98,12 +307,49 @@ Docker 볼륨을 생성하고 컨테이너에 연결한다.
 컨테이너 삭제 전/후로 데이터를 확인하여 데이터가 유지됨을 증명한다.
 기술 문서에 생성/연결/검증 절차(명령+출력)를 포함한다.
 
+```bash
+ls -la
+```
+```bash
+ls -la
+```
+```bash
+ls -la
+```
+```bash
+ls -la
+```
+```bash
+ls -la
+```
+```bash
+ls -la
+```
+
 
 
 ## Git 설정 및 GitHub 연동
 Git 사용자 정보/기본 브랜치 설정을 완료하고 git config --list 결과를 기록한다.
 * GitHub 로그인 및 저장소 연동을 완료하고, 연동 증거(스크린샷 등)를 기술 문서에 첨부한다.
 
+```bash
+ls -la
+```
+```bash
+ls -la
+```
+```bash
+ls -la
+```
+```bash
+ls -la
+```
+```bash
+ls -la
+```
+```bash
+ls -la
+```
 
 
 
