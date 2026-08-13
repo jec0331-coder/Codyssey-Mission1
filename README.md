@@ -20,6 +20,11 @@
 ```bash
 pwd
 ```
+```bash
+/Users/jeong-uicheol/Desktop/VS_Code_Python
+```
+
+
 - 목록 확인(숨김 파일 포함)
 ```bash
 ls -la
