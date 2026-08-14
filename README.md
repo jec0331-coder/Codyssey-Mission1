@@ -308,15 +308,36 @@ echo "Hello from Ubuntu Container"
 
 - 3.컨테이너 종료/유지(attach/exec 등)의 차이를 스스로 관찰하고 간단히 정리한다.
 ```bash
-ls -la
+exit
 ```
+  - 컨테이너 종료
 ```bash
-ls -la
+docker attach my-web
 ```
-```bash
-ls -la
-```
+  - attach로 들어간 상태에서 그냥 exit를 치고 나오면 메인 터미널이 죽어버리기 때문에 컨테이너 전체가 종료(Stop)
 
+```bash
+docker exec -it my-web /bin/bash
+```
+  - 메인 프로세스와 분리된 독립된 방이므로, 작업이 끝나고 exit를 쳐서 나와도 컨테이너가 죽지 않고 계속 살아있음
+
+- 스크린샷
+<img width="852" height="454" alt="과제1 도커 exit, attach, exec" src="https://github.com/user-attachments/assets/44ec5d66-4230-4406-aefe-27a5c9971144" />
+
+
+- 정리
+
+| 명령어 | 대상 컨테이너 상태 | 핵심 역할 (비유) | 빠져나올 때 (exit) |
+| :--- | :--- | :--- | :--- |
+| docker run | 없음 (새로 만듦) | 우분투 컴퓨터를 새로 조립하고 전원을 켜서 모니터 앞에 앉는 것 | 컨테이너가 종료됨 |
+| docker exec | 이미 실행 중 | 켜져 있는 컴퓨터에 새로운 원격 로그인 창(새 탭)을 열고 들어가는 것 | 컨테이너 유지 (권장) |
+| docker attach | 이미 실행 중 | 켜져 있는 컴퓨터의 메인 모니터 화면을 그대로 같이 공유해서 보는 것 | 컨테이너가 종료됨 |
+
+
+
+
+
+- 웹서버 띄우고 스크린샷 남기기!!
 
 
 
