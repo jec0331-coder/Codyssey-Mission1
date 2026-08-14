@@ -144,8 +144,6 @@ drwxr-xr-x   3 jeong-uicheol  staff   96  8 13 20:59 .
 drwxr-xr-x  12 jeong-uicheol  staff  384  8 13 20:58 ..
 -rw-r--r--   1 jeong-uicheol  staff    6  8 14 14:40 test1.txt
 ```
-- 파일,폴더 권한변경 결과
-<img width="490" height="75" alt="과제1 권한확인" src="https://github.com/user-attachments/assets/e6e25499-6f74-464a-99ab-84413eceabca" />
 
 
 - 2.권한 변경
