@@ -115,16 +115,16 @@ rm backup.txt
 
 - 9.파일에 내용 쓰기
 ```bash
-ls -la
+echo "hello" > test1.txt
 ```
-
 - 10.파일 내용 확인
 ```bash
-ls -la
+cat test1.txt
 ```
 ```bash
-ls -la
+hello
 ```
+<img width="615" height="821" alt="과제1 파일 쓰고 풀력" src="https://github.com/user-attachments/assets/1811d2d1-4b0e-44f7-97ad-e5d300ff38c6" />
 
 
 
@@ -140,22 +140,23 @@ ls -la
 ls -la
 ```
 ```bash
-ls -la
+total 8
+drwxr-xr-x   3 jeong-uicheol  staff   96  8 13 20:59 .
+drwxr-xr-x  12 jeong-uicheol  staff  384  8 13 20:58 ..
+-rw-r--r--   1 jeong-uicheol  staff    6  8 14 14:40 test1.txt
 ```
+<img width="490" height="75" alt="과제1 권한확인" src="https://github.com/user-attachments/assets/e6e25499-6f74-464a-99ab-84413eceabca" />
+
 
 - 2.권한 변경
 ```bash
-ls -la
+chmod 755 test1.txt
 ```
 ```bash
-ls -la
+chmod -R 755 Mission1/
 ```
-```bash
-ls -la
-```
-```bash
-ls -la
-```
+<img width="598" height="453" alt="과제1 권한 변경" src="https://github.com/user-attachments/assets/9cd537d4-36ca-4a84-8f9c-769f6957a266" />
+
 
 
 
