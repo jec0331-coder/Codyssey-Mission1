@@ -47,6 +47,7 @@ drwxr-xr-x   9 jeong-uicheol  staff    288  8 13 17:33 Mission3
 -rw-r--r--   1 jeong-uicheol  staff  20284  8 10 22:26 pythonFile3.py
 drwxr-xr-x   6 jeong-uicheol  staff    192  8 12 12:18 quiz_clone
 ```
+  - 스크린샷
 <img width="551" height="185" alt="과제1 ls -la" src="https://github.com/user-attachments/assets/00f2e291-9fe4-4b4b-91ea-8077fb27cfe5" />
 
 
@@ -56,6 +57,7 @@ drwxr-xr-x   6 jeong-uicheol  staff    192  8 12 12:18 quiz_clone
 ```bash
 mkdir Mission1 
 ```
+  - 스크린샷
 <img width="873" height="60" alt="과제1 파일,디렉토리 생성" src="https://github.com/user-attachments/assets/ec518bbf-99ad-441c-aa91-c90f8308455c" />
 
 
@@ -64,6 +66,7 @@ mkdir Mission1
 ```bash
 cd Mission1
 ```
+  - 스크린샷
 <img width="551" height="47" alt="과제1 디렉토리 이동" src="https://github.com/user-attachments/assets/42d8a97b-b087-4e7f-856b-8bde9afa0693" />
 
 
@@ -78,6 +81,7 @@ cp test1.txt backup.txt
 cp -r Mission1/ Mission1_backup/
 ```
 
+  - 스크린샷
 <img width="994" height="752" alt="과제1 파일,폴더 복사" src="https://github.com/user-attachments/assets/f2353496-b558-4564-9dd1-29b74ef69475" />
 
 
@@ -86,11 +90,13 @@ cp -r Mission1/ Mission1_backup/
 ```bash
 mv test.txt Mission1/
 ```
+  - 스크린샷
 <img width="1188" height="771" alt="과제1 파일 이동" src="https://github.com/user-attachments/assets/118a71b8-630e-4100-bf1f-fdd897c5566e" />
 
 ```bash
 mv test.txt test1.txt
 ```
+  - 스크린샷
 <img width="284" height="48" alt="과제1 파일 이름 변경" src="https://github.com/user-attachments/assets/fd083d2e-1db6-4e8a-8f95-45a2f56950ae" />
 
 
@@ -99,6 +105,7 @@ mv test.txt test1.txt
 ```bash
 touch test.txt
 ```
+  - 스크린샷
 <img width="873" height="60" alt="과제1 파일,디렉토리 생성" src="https://github.com/user-attachments/assets/ec518bbf-99ad-441c-aa91-c90f8308455c" />
 
 
@@ -109,6 +116,7 @@ rm -r Mission1_backup/
 ```bash
 rm backup.txt
 ```
+  - 스크린샷
 <img width="973" height="750" alt="과제2 폴더,파일 삭제" src="https://github.com/user-attachments/assets/3f02405c-c810-4ceb-8515-c96cc63a4391" />
 
 
@@ -124,6 +132,7 @@ cat test1.txt
 ```bash
 hello
 ```
+  - 스크린샷
 <img width="615" height="821" alt="과제1 파일 쓰고 풀력" src="https://github.com/user-attachments/assets/1811d2d1-4b0e-44f7-97ad-e5d300ff38c6" />
 
 
@@ -136,6 +145,7 @@ hello
 ```bash
 ls -la
 ```
+  - 스크린샷
 <img width="490" height="75" alt="과제1 권한확인" src="https://github.com/user-attachments/assets/1c91fbb8-87bf-439e-b889-43d20fcab00d" />
 
 ```bash
@@ -153,6 +163,7 @@ chmod 755 test1.txt
 ```bash
 chmod -R 755 Mission1/
 ```
+  - 스크린샷
 <img width="598" height="453" alt="과제1 권한 변경" src="https://github.com/user-attachments/assets/9cd537d4-36ca-4a84-8f9c-769f6957a266" />
 
 
@@ -167,6 +178,7 @@ docker --version
 ```bash
 Docker version 27.4.1, build b9d17ea
 ```
+  - 스크린샷
 <img width="463" height="60" alt="과제1 도커 버전 확인" src="https://github.com/user-attachments/assets/2dea5b1c-0912-4350-9839-fa07fb501850" />
 
 
@@ -197,6 +209,7 @@ Server:
  Storage Driver: overlay2
 ...생략
 ```
+  - 스크린샷
 <img width="552" height="445" alt="docker info" src="https://github.com/user-attachments/assets/8b6c1ec0-5bdb-4a94-b3d8-b57733938da8" />
 
 
@@ -220,6 +233,7 @@ my-custom-nginx   v1        a92a7f8e2251   47 hours ago   161MB
 nginx             latest    5253dc86cc93   9 days ago     161MB
 ubuntu            latest    86a1a31fdd84   2 weeks ago    100MB
 ```
+  - 스크린샷
 <img width="487" height="87" alt="docker images" src="https://github.com/user-attachments/assets/cf570499-5ecd-4a58-ba0f-eda2059055b9" />
 
 
@@ -242,6 +256,7 @@ docker start my-web
 docker ps -a
 ```
 
+  - 스크린샷
 <img width="939" height="311" alt="과제1 컨테이너 점검" src="https://github.com/user-attachments/assets/59659a56-3aec-49ba-8f27-4139c45cc0a3" />
 
 
@@ -249,6 +264,7 @@ docker ps -a
 ```bash
 docker logs my-web
 ```
+  - 스크린샷
 <img width="700" height="577" alt="docker logs" src="https://github.com/user-attachments/assets/4e996b26-5bbf-40f3-80d9-37fc88c483c5" />
 
 
@@ -256,6 +272,7 @@ docker logs my-web
 ```bash
 docker stats
 ```
+  - 스크린샷
 <img width="911" height="53" alt="docker stats" src="https://github.com/user-attachments/assets/5cef42b7-1530-4fc6-8553-a64276e4e42d" />
 
 
@@ -270,6 +287,7 @@ docker stats
 ```bash
 docker run hello-world
 ```
+  - 스크린샷
 <img width="802" height="427" alt="docker run hello-world" src="https://github.com/user-attachments/assets/ec92146b-520a-43e8-8f34-fe67c4018199" />
 
 
@@ -284,6 +302,7 @@ ls -l
 echo "Hello from Ubuntu Container"
 ```
 
+  - 스크린샷
 <img width="832" height="375" alt="우분투 기본 조작" src="https://github.com/user-attachments/assets/5d96f435-90a0-47e3-b8bb-573d85c54082" />
 
 
