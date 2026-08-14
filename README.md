@@ -268,24 +268,26 @@ docker stats
 ## 컨테이너 실행 실습
 - 1.hello-world 실행 성공을 기록
 ```bash
-ls -la
+docker run hello-world
+```
+<img width="802" height="427" alt="docker run hello-world" src="https://github.com/user-attachments/assets/ec92146b-520a-43e8-8f34-fe67c4018199" />
+
+
+- 2.ubuntu 컨테이너를 실행하고 내부 진입 후 간단 명령(예: ls, echo) 수행 결과
+```bash
+docker run -it ubuntu /bin/bash
 ```
 ```bash
-ls -la
+ls -l
+```
+```bash
+echo "Hello from Ubuntu Container"
 ```
 
-- 2.ubuntu 컨테이너를 실행하고 내부 진입 후 간단 명령(예: ls, echo) 수행 결과를 기록한다.
-```bash
-ls -la
-```
-```bash
-ls -la
-```
+<img width="832" height="375" alt="우분투 기본 조작" src="https://github.com/user-attachments/assets/5d96f435-90a0-47e3-b8bb-573d85c54082" />
+
 
 - 3.컨테이너 종료/유지(attach/exec 등)의 차이를 스스로 관찰하고 간단히 정리한다.
-```bash
-ls -la
-```
 ```bash
 ls -la
 ```
