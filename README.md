@@ -132,12 +132,12 @@ hello
 
 
 ## 권한 실습
-권한을 확인/변경하는 명령을 수행하고, 변경 전/후 비교를 기술 문서에 남긴다.
-최소 요구: 파일 1개, 디렉토리 1개에 대해 권한 변경 실험을 수행한다.
-
 - 1.권한 확인
 ```bash
 ls -la
+<img width="490" height="75" alt="과제1 권한확인" src="https://github.com/user-attachments/assets/1c91fbb8-87bf-439e-b889-43d20fcab00d" />
+
+
 ```
 ```bash
 total 8
@@ -145,6 +145,7 @@ drwxr-xr-x   3 jeong-uicheol  staff   96  8 13 20:59 .
 drwxr-xr-x  12 jeong-uicheol  staff  384  8 13 20:58 ..
 -rw-r--r--   1 jeong-uicheol  staff    6  8 14 14:40 test1.txt
 ```
+- 파일,폴더 권한변경 결과
 <img width="490" height="75" alt="과제1 권한확인" src="https://github.com/user-attachments/assets/e6e25499-6f74-464a-99ab-84413eceabca" />
 
 
@@ -161,88 +162,107 @@ chmod -R 755 Mission1/
 
 
 ## Docker 설치, 기본 점검
-Docker 버전 확인 결과를 기록한다. (docker --version)
-Docker 데몬 동작 여부 확인 결과를 기록한다. (docker info 또는 동등 점검)
 
 - 1.버전 확인
 ```bash
-ls -la
+docker --version
 ```
 ```bash
-ls -la
+Docker version 27.4.1, build b9d17ea
 ```
+<img width="463" height="60" alt="과제1 도커 버전 확인" src="https://github.com/user-attachments/assets/2dea5b1c-0912-4350-9839-fa07fb501850" />
+
 
 - 2.데몬 동작 확인
 ```bash
-ls -la
+docker info
 ```
 ```bash
-ls -la
+Client:
+ Version:    27.4.1
+ Context:    orbstack
+ Debug Mode: false
+ Plugins:
+  buildx: Docker Buildx (Docker Inc.)
+    Version:  v0.18.0
+    Path:     /Users/jeong-uicheol/.docker/cli-plugins/docker-buildx
+  compose: Docker Compose (Docker Inc.)
+    Version:  v2.32.4
+    Path:     /Users/jeong-uicheol/.docker/cli-plugins/docker-compose
+
+Server:
+ Containers: 2
+  Running: 1
+  Paused: 0
+  Stopped: 1
+ Images: 3
+ Server Version: 27.4.1
+ Storage Driver: overlay2
+...생략
 ```
+<img width="552" height="445" alt="docker info" src="https://github.com/user-attachments/assets/8b6c1ec0-5bdb-4a94-b3d8-b57733938da8" />
 
 
 
 
 ## Docker 기본 운영 명령 수행
-이미지: 다운로드/목록 확인 (예: docker images)
-컨테이너: 실행/중지/목록 확인 (예: docker ps, docker ps -a)
-운영: 로그 확인 (예: docker logs), 리소스 확인 (예: docker stats)
 
 - 1.이미지 다운로드
 ```bash
-ls -la
-```
-```bash
-ls -la
+docker pull nginx
+docker pull ubuntu
 ```
 
 - 2.이미지 목록 확인
 ```bash
-ls -la
+docker images
 ```
 ```bash
-ls -la
+REPOSITORY        TAG       IMAGE ID       CREATED        SIZE
+my-custom-nginx   v1        a92a7f8e2251   47 hours ago   161MB
+nginx             latest    5253dc86cc93   9 days ago     161MB
+ubuntu            latest    86a1a31fdd84   2 weeks ago    100MB
 ```
+<img width="487" height="87" alt="docker images" src="https://github.com/user-attachments/assets/cf570499-5ecd-4a58-ba0f-eda2059055b9" />
+
+
 
 - 3.컨테이너 실행
 ```bash
-ls -la
+docker run -d -p 80:80 --name my-web nginx
 ```
 ```bash
 ls -la
 ```
 - 4.컨테이너 중지
 ```bash
-ls -la
+docker stop my-web
 ```
+- 다시 시작
 ```bash
-ls -la
+docker start my-web
 ```
 
 - 5.컨테이너 목록 확인
 ```bash
-ls -la
+docker ps -a
 ```
-```bash
-ls -la
-```
+
+<img width="939" height="311" alt="과제1 컨테이너 점검" src="https://github.com/user-attachments/assets/59659a56-3aec-49ba-8f27-4139c45cc0a3" />
 
 
 - 6.로그 확인
 ```bash
-ls -la
+docker logs my-web
 ```
-```bash
-ls -la
-```
+<img width="700" height="577" alt="docker logs" src="https://github.com/user-attachments/assets/4e996b26-5bbf-40f3-80d9-37fc88c483c5" />
+
 
 - 7.리소스 확인
 ```bash
-ls -la
+docker stats
 ```
-```bash
-ls -la
-```
+<img width="911" height="53" alt="docker stats" src="https://github.com/user-attachments/assets/5cef42b7-1530-4fc6-8553-a64276e4e42d" />
 
 
 
