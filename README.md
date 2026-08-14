@@ -135,10 +135,9 @@ hello
 - 1.권한 확인
 ```bash
 ls -la
-<img width="490" height="75" alt="과제1 권한확인" src="https://github.com/user-attachments/assets/1c91fbb8-87bf-439e-b889-43d20fcab00d" />
-
-
 ```
+<img width="490" height="75" alt="과제1 권한확인" src="https://github.com/user-attachments/assets/1c91fbb8-87bf-439e-b889-43d20fcab00d" />
+
 ```bash
 total 8
 drwxr-xr-x   3 jeong-uicheol  staff   96  8 13 20:59 .
@@ -230,9 +229,6 @@ ubuntu            latest    86a1a31fdd84   2 weeks ago    100MB
 - 3.컨테이너 실행
 ```bash
 docker run -d -p 80:80 --name my-web nginx
-```
-```bash
-ls -la
 ```
 - 4.컨테이너 중지
 ```bash
