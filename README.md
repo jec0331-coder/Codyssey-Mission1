@@ -16,12 +16,16 @@
 ## 디렉토리 구조
 ```text
 Codyssey-Mission1/
-├──custom-ubuntu
+├──custom-ubuntu : 커스텀 리눅스 컨테이너를 다루면서 생성
+│  └──Dockerfile : 커스텀 리눅스 컨테이너를 만들기 위한 도커파일
 ├──docker-test
-├──my-nginx-project
+│  └──index.html : 바인드 마운트 다루면서 생성
+├──my-nginx-project : 커스텀 웹서버 만들면서 생성.
+│  ├──Dockerfile
+│  └──index.html 
 ├──.gitignore
 ├──README.md
-├──test1.txt
+├──test1.txt : 터미널 명령어 다루면서 생성
 ```
 
 ## 재현 방법
