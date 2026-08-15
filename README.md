@@ -442,37 +442,44 @@ docker ps
 
 
 ## Docker 볼륨 영속성 검증
-Docker 볼륨을 생성하고 컨테이너에 연결한다.
-컨테이너 삭제 전/후로 데이터를 확인하여 데이터가 유지됨을 증명한다.
-기술 문서에 생성/연결/검증 절차(명령+출력)를 포함한다.
 
 - 1.볼륨 생성
 ```bash
-ls -la
+docker volume create my-db-vol
 ```
 
 - 2.컨테이너에 연결
 ```bash
-ls -la
+docker run -it --name container-A -v my-db-vol:/app ubuntu:22.04
 ```
 
 - 3.확인
 ```bash
-ls -la
+cd /app
+echo "This is important data saved in 2026" > secrets.txt
+cat secrets.txt
+exit
 ```
 
 - 4.삭제
 ```bash
-ls -la
+docker rm container-A
 ```
 
 - 5.삭제 후 확인
 ```bash
-ls -la
+docker run -it --name container-B -v my-db-vol:/app ubuntu:22.04
+cd /app
+ls -l
+cat secrets.txt
 ```
+
 ```bash
-ls -la
+This is important data saved in 2026
 ```
+
+- 스크린샷
+<img width="830" height="370" alt="스크린샷 2026-08-15 오후 3 01 23" src="https://github.com/user-attachments/assets/ebef4e0d-5716-4e59-8550-561b1f682e51" />
 
 
 
@@ -482,8 +489,12 @@ Git 사용자 정보/기본 브랜치 설정을 완료하고 git config --list �
 
 - 1.설정 후 확인
 ```bash
-ls -la
+git config --list
 ```
+
+  - 출력 스크린샷;
+
+
 
 ```bash
 ls -la
