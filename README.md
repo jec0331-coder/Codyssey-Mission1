@@ -169,6 +169,13 @@ chmod 755 test1.txt
 ```bash
 chmod -R 755 Mission1/
 ```
+
+- 2-1.트러블 슈팅 : 권한 변경할 파일이 있는 디렉토리에 위치해 있지 않아서 에러발생함. 파일이 있는 상위 디렉토리로 이동해줌.
+```bash
+cd ..
+```
+
+
   - 스크린샷
 <img width="598" height="453" alt="과제1 권한 변경" src="https://github.com/user-attachments/assets/9cd537d4-36ca-4a84-8f9c-769f6957a266" />
 
