@@ -80,6 +80,13 @@ cp test1.txt backup.txt
 cp -r Mission1/ Mission1_backup/
 ```
 
+- 5-1.디렉토리 복제시 디렉토리 경로 앞에 -r을 붙이지 않아서 에러가남.
+```bash
+#에러 발생한 코드
+cp Mission1/ Mission1_backup/
+```
+
+
   - 스크린샷
 <img width="994" height="752" alt="과제1 파일,폴더 복사" src="https://github.com/user-attachments/assets/f2353496-b558-4564-9dd1-29b74ef69475" />
 
