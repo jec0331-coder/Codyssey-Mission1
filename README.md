@@ -492,23 +492,18 @@ Git 사용자 정보/기본 브랜치 설정을 완료하고 git config --list �
 git config --list
 ```
 
-  - 출력 스크린샷;
-<img width="566" height="196" alt="스크린샷 2026-08-15 오후 3 03 38" src="https://github.com/user-attachments/assets/5ba9e460-86c9-4eb8-bbf7-afa8805cb2a6" />
+  - 출력 스크린샷
+<img width="689" height="158" alt="스크린샷 2026-08-15 오후 3 09 45" src="https://github.com/user-attachments/assets/653f9b1c-1918-4237-958c-85e84f591df6" />
 
-
-
-```bash
-ls -la
-```
 
 - 2.연동
 ```bash
-ls -la
+git remote set-url origin https://github.com/jec0331-coder/Codyssey-Mission1/tree/main
 ```
 
-```bash
-ls -la
-```
+  - 출력 스크린샷
+<img width="1001" height="72" alt="스크린샷 2026-08-15 오후 3 07 32" src="https://github.com/user-attachments/assets/21ddef20-da99-478a-b553-07272a1df6cc" />
+
 
 
 
