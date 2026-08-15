@@ -279,6 +279,16 @@ docker stats
 
 
 
+## 📊 도커 이미지와 컨테이너 비교
+
+| 비교 측면 | 이미지 (Image) | 컨테이너 (Container) |
+| :--- | :--- | :--- |
+| **기본 개념** | 컨테이너를 생성하기 위한 정적 **설계도/스냅샷** (Read-Only) | 이미지를 바탕으로 독립된 자원에서 격리되어 돌아가는 **살아있는 컴퓨터** (Read-Write) |
+| **비유** | 프로그램 설치 파일(EXE), 붕어빵 틀, 설계도 | 실행된 프로그램 프로세스, 붕어빵, 실제 건축물 |
+| **빌드 (Build)** | • `Dockerfile`을 기반으로 **새롭게 구워내어 생성**<br>• 소스 코드나 패키지 변경 시 **매번 다시 빌드** 필요 (명령어: `docker build`) | • 빌드 개념이 없음<br>• 이미 존재하는 이미지를 가져와 기반 주소 위에 **순식간에 생성 및 시작** (명령어: `docker run`) |
+| **실행 (Execution)** | • 정적인 상태로 **스스로 실행될 수 없음**<br>• 하나의 이미지로 **수십, 수백 개의 컨테이너를 복제하여 동시에 실행** 가능 | • 프로세스로서 **살아서 작동하거나 멈출 수 있음**<br>• `Up` (실행 중), `Exited` (종료됨) 등의 상태를 가짐 |
+| **변경 (Modification)** | • **절대 변경 불가능 (Immutable)**<br>• 한 번 빌드된 이미지는 내부 파일을 수정하거나 수정 내용을 누적할 수 없음 | • **실시간 변경 가능 (Mutable)**<br>• 실행 중에 내부 파일을 쓰거나 수정 가능<br>• 단, 컨테이너가 **삭제되면 변경 데이터도 소멸** (Volume 연동 필요) |
+
 
 
 ## 컨테이너 실행 실습
@@ -504,6 +514,12 @@ git remote set-url origin https://github.com/jec0331-coder/Codyssey-Mission1/tre
 <img width="1001" height="72" alt="스크린샷 2026-08-15 오후 3 07 32" src="https://github.com/user-attachments/assets/21ddef20-da99-478a-b553-07272a1df6cc" />
 
 
+- 깃허브에 push
+```bash
+git push origin main
+```
+  - 스크린샷
+<img width="632" height="146" alt="스크린샷 2026-08-15 오후 3 31 30" src="https://github.com/user-attachments/assets/f5d4d08a-26b9-4e76-a48e-0bf5ea91ccde" />
 
 
 
