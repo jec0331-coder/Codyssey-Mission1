@@ -571,6 +571,17 @@ This is important data saved in 2026
 <img width="830" height="370" alt="스크린샷 2026-08-15 오후 3 01 23" src="https://github.com/user-attachments/assets/ebef4e0d-5716-4e59-8550-561b1f682e51" />
 
 
+
+- 바인드 마운트 실습
+```bash
+docker run -d -p 8080:80 -v "${PWD}/html:/usr/share/nginx/html" --name my-web nginx
+echo '<h1>Hello Bind Mount!</h1>' > ./html/index.html
+```
+  - 스크린샷
+<img width="1293" height="333" alt="스크린샷 2026-08-15 오후 4 10 02" src="https://github.com/user-attachments/assets/9cbce169-ea9e-46b6-b042-98cd79928097" />
+
+
+
 ## 도커 데이터 영속성 고도화: 바인드 마운트 비교 및 백업 전략
 
 도커 컨테이너 내부의 데이터 휘발성을 해결하기 위한 기법은 크게 **명명된 볼륨(Named Volume)**과 **바인드 마운트(Bind Mount)**로 나뉘며, 실제 운영 환경에서는 데이터 유실을 방지하기 위한 정기 백업 스크립트 구축이 필수적입니다.
@@ -633,6 +644,44 @@ find \$BACKUP_DIR -type f -name "*.tar.gz" -mtime +30 -delete
 ```
 
 
+- 특정 포트를 사용하는 프로세스 찾기
+```bash
+lsof -i :8080
+```
+ - 스크린샷
+<img width="729" height="95" alt="스크린샷 2026-08-15 오후 4 12 43" src="https://github.com/user-attachments/assets/bc1bd60b-7036-40af-9d07-33ea695eb599" />
+
+
+- 열려 있는 모든 포트 및 연결 상태 확인
+```bash
+netstat -ntlp
+```
+ - 스크린샷
+<img width="638" height="194" alt="스크린샷 2026-08-15 오후 4 14 08" src="https://github.com/user-attachments/assets/4405b339-0766-4e50-adc0-e11ebf7a3296" />
+
+
+- 현재 연결된 모든 네트워크 세션 확인
+```bash
+lsof -i :8080
+```
+ - 스크린샷
+<img width="688" height="109" alt="스크린샷 2026-08-15 오후 4 17 32" src="https://github.com/user-attachments/assets/1af205e5-2040-4d86-83a7-6c27bc461698" />
+
+- 프로세스 종료
+- kill [옵션/시그널] [PID]
+  - [PID] : 프로세스가 가진 고유 번호입니다. lsof -i :포트나 ps ef 명령어로 확인.
+  - 시그널 번호
+    - 15 : 안전한 종료 (안전벨트 매고 멈춤). 작업 중인 데이터를 저장하고 스스로 닫히도록 유도함.
+    - 9 : 강제 종료 (비상정지 버튼). 프로세스 의견을 무시하고 커널이 즉시 강제로 없애버림. 데이터 유실 위험 있음.
+    - 1 : 재시작/재설정 (리로드). 프로세스를 죽이지 않고 설정 파일만 다시 읽어옴.
+
+```bash
+kill 579
+```
+- 스크린샷
+<img width="687" height="36" alt="스크린샷 2026-08-15 오후 4 26 08" src="https://github.com/user-attachments/assets/1207f670-0259-4f0f-88d4-a07a37fd9d30" />
+
+ 
 
 
 ## Git 설정 및 GitHub 연동
