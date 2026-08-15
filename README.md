@@ -25,7 +25,7 @@ Codyssey-Mission1/
 │  └──index.html 
 ├──.gitignore
 ├──README.md
-├──test1.txt : 터미널 명령어 다루면서 생성
+└──test1.txt : 터미널 명령어 다루면서 생성
 ```
 
 ## 재현 방법
