@@ -337,10 +337,6 @@ docker exec -it my-web /bin/bash
 
 
 
-- 웹서버 띄우고 스크린샷 남기기!!
-
-
-
 ## 기존 Dockerfile 기반 커스텀 이미지 제작
 아래 방식 중 하나를 선택하여 기존 Dockerfile/이미지 기반의 커스텀 이미지를 만든다.
 (A) 웹 서버 베이스 이미지 활용(예: NGINX/Apache 등) + 정적 콘텐츠/설정만 교체
@@ -354,25 +350,73 @@ docker exec -it my-web /bin/bash
 
 - 1.도커 파일 작성
 ```bash
-ls -la
+mkdir custom-ubuntu
+cd custom-ubuntu
+touch Dockerfile
 ```
 
-- 기존 베이스 :
-- 커스텀 포인트의 목적
-  - 가 :
-  - 나 :
-  - 다 :
+```bash
+# 1. 기반이 될 베이스 이미지 지정 (우분투 22.04 버전을 기준)
+FROM ubuntu:22.04
 
+# [커스텀 요소 1] 컨테이너 시스템 시간대를 한국 시간(KST)으로 설정
+# 패키지 설치 시 대화형 창이 뜨는 것을 방지(DEBIAN_FRONTEND)하며 시간대를 주입합니다.
+ENV DEBIAN_FRONTEND=noninteractive
+ENV TZ=Asia/Seoul
+RUN apt-get update && apt-get install -y tzdata && \
+    ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+# [커스텀 요소 2] 필수 개발 유틸리티(Vim, Curl) 미리 설치하기
+# 나중에 컨테이너 안에서 패키지를 일일이 깔지 않아도 되도록 빌드 시점에 구워둡니다.
+RUN apt-get install -y vim curl && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# 3. 컨테이너 내부의 기본 작업 디렉터리 설정 (이동 시 root 폴더로 시작)
+WORKDIR /root
+
+# 4. 컨테이너가 켜지자마자 실행할 기본 명령어 (우분투 터미널 실행)
+CMD ["/bin/bash"]
+```
 
 - 2.빌드, 실행 명령
 ```bash
-ls -la
+docker build -t my-ubuntu:1.0 .
 ```
 
-- 3.실행 결과
+
+- 기존 베이스 : ubuntu:22.04
+- 커스텀 포인트의 목적
+  - 1.컨테이너 시스템 시간대를 한국 시간(KST)으로 설정
+  - 패키지 설치 시 대화형 창이 뜨는 것을 방지(DEBIAN_FRONTEND)하며 시간대를 주입.
 ```bash
-ls -la
+ENV DEBIAN_FRONTEND=noninteractive
+ENV TZ=Asia/Seoul
+RUN apt-get update && apt-get install -y tzdata && \
+    ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 ```
+  
+  - 2.필수 개발 유틸리티(Vim, Curl) 미리 설치
+  - 나중에 컨테이너 안에서 패키지를 일일이 깔지 않아도 되도록 빌드 시점에 구워둠.
+```bash
+RUN apt-get install -y vim curl && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
+```
+
+  - 3.컨테이너 내부의 기본 작업 디렉터리 설정 (이동 시 root 폴더로 시작)
+```bash
+WORKDIR /root
+```
+
+
+  - 4.컨테이너가 켜지자마자 실행할 기본 명령어 (우분투 터미널 실행)
+```bash
+CMD ["/bin/bash"]
+```
+
+
+- 실행 결과 스크린샷
+
+<img width="1090" height="416" alt="과제1 커스텀 우분투 생성" src="https://github.com/user-attachments/assets/995d18be-e9e7-45bc-9ccf-b468d886d29f" />
 
 
 
