@@ -427,15 +427,17 @@ CMD ["/bin/bash"]
 ## 포트 매핑 및 접속 증거
 브라우저 접속 화면(또는 curl 응답)을 기술 문서에 첨부한다.
 
-- 1.
+- 1.터미널에서 확인
 ```bash
-ls -la
+docker ps
 ```
+스크린샷
+<img width="916" height="86" alt="스크린샷 2026-08-15 오후 2 16 05" src="https://github.com/user-attachments/assets/f54e5c99-eaa8-46ee-9ba9-4315f294a802" />
 
-- 2.
-```bash
-ls -la
-```
+
+- 2.웹페이지로 확인
+<img width="736" height="372" alt="스크린샷 2026-08-15 오후 2 18 37" src="https://github.com/user-attachments/assets/978997ba-fc3a-4646-9452-28843943a946" />
+
 
 
 
