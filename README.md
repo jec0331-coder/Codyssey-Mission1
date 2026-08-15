@@ -13,8 +13,22 @@
 - git version 2.39.2
 
 
+## 디렉토리 구조
+```text
+Codyssey-Mission1/
+├──custom-ubuntu
+├──docker-test
+├──my-nginx-project
+├──.gitignore
+├──README.md
+├──test1.txt
+```
 
-
+## 재현 방법
+```bash
+git clone https://github.com/jec0331-coder/Codyssey-Mission1
+cd Codyssey-Mission1
+```
 
 ## 터미널 조작
 - 1.현재 위치 확인
