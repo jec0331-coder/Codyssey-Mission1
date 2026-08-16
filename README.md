@@ -70,9 +70,10 @@ drwxr-xr-x   6 jeong-uicheol  staff    192  8 12 12:18 quiz_clone
 
 
 
-- 3.디렉토리 생성
+- 3.디렉토리 생성, 파일 생성
 ```bash
-mkdir Mission1 
+mkdir Mission1
+touch test1.txt
 ```
   - 스크린샷
 <img width="873" height="60" alt="과제1 파일,디렉토리 생성" src="https://github.com/user-attachments/assets/ec518bbf-99ad-441c-aa91-c90f8308455c" />
