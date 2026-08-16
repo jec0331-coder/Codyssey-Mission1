@@ -98,7 +98,7 @@ cp test1.txt backup.txt
 cp -r Mission1/ Mission1_backup/
 ```
 
-- 5-1.디렉토리 복제시 디렉토리 경로 앞에 -r을 붙이지 않아서 에러가남.
+- 5-1.트러블 슈팅 : 디렉토리 복제시 디렉토리 경로 앞에 -r을 붙이지 않아서 에러가남.
 ```bash
 #에러 발생한 코드
 cp Mission1/ Mission1_backup/
