@@ -759,6 +759,17 @@ git push origin main
 <img width="632" height="146" alt="스크린샷 2026-08-15 오후 3 31 30" src="https://github.com/user-attachments/assets/f5d4d08a-26b9-4e76-a48e-0bf5ea91ccde" />
 
 
+## 도커 컴포즈를 이용한 재현 가능한 볼륨 설정을 구현
+<img width="1349" height="827" alt="스크린샷 2026-08-19 오후 12 39 30" src="https://github.com/user-attachments/assets/7a0e04f3-8df9-400b-b738-1279b2467e90" />
 
+
+## 호스트 포트가 이미 사용중이라 포트매핑에 실패시 원인 진단
+- 1.어떤 프로세스가 포트를 쓰는지 확인(PID검색)
+```bash
+sudo lsof -i :8080
+```
+
+- 2.점유 중인 프로세스 강제 종료(PID가 9인 경우)
+sudo kill -9 432
 
 
