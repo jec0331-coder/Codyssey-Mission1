@@ -9,7 +9,7 @@
 - macOS 기본 터미널
 - vscode 버전: 1.104.2
 - OrbStack Version 1.9.5
-- Docker version 
+- Docker version 27.4.1
 - git version 2.39.2
 
 
