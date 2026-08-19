@@ -108,6 +108,8 @@ cp Mission1/ Mission1_backup/
 
   - 스크린샷
 <img width="994" height="752" alt="과제1 파일,폴더 복사" src="https://github.com/user-attachments/assets/f2353496-b558-4564-9dd1-29b74ef69475" />
+- 5-2.디렉토리의 위치 변경
+<img width="925" height="750" alt="스크린샷 2026-08-19 오후 12 15 17" src="https://github.com/user-attachments/assets/a5d1fb78-707c-41f8-8543-8bab608ba429" />
 
 
 
@@ -282,6 +284,10 @@ Server:
   - 스크린샷
 <img width="552" height="445" alt="docker info" src="https://github.com/user-attachments/assets/8b6c1ec0-5bdb-4a94-b3d8-b57733938da8" />
 
+
+
+- hello-world 출력
+<img width="641" height="331" alt="스크린샷 2026-08-19 오후 12 20 29" src="https://github.com/user-attachments/assets/43dafd85-42e1-4ec9-98d2-91f9b2582734" />
 
 
 
